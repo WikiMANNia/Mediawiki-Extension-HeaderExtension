@@ -16,17 +16,15 @@ Installation instructions can be found at [MediaWiki](http://www.mediawiki.org/w
 
 ### Add meta data
 
-* $wgHeadMetaName
-* $wgHeadMetaCode
+* $wgHeaderHeadItems (array)
 
 ### Add skripts
 
-* $wgHeadScriptName
-* $wgHeadScriptCode
+* $wgHeaderMetaItems (array)
 
 ## Compatibility
 
-This extension works from REL1_35 and has been tested up to MediaWiki version `1.40.1`.
+This extension works from REL1_35 and has been tested up to MediaWiki version `1.45.3`.
 
 ## Version history
 
@@ -57,3 +55,9 @@ v3.0.0
 
 * Refactoring
 * Supports REL1_35
+
+v3.1.0
+
+* Refactoring
+* Added translations from translatewiki.net translators
+* Supports REL1_45

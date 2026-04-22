@@ -1,6 +1,6 @@
 {
 	"name": "HeaderExtension",
-	"version": "3.0.0",
+	"version": "3.1.0",
 	"author": [
 		"[https://www.mediawiki.org/wiki/User:JinRyuuNagy JinRyuu]",
 		"[https://www.mediawiki.org/wiki/User:StarHeartHunt StarHeartHunt]",
@@ -18,30 +18,29 @@
 			"i18n"
 		]
 	},
-	"Hooks": {
-		"BeforePageDisplay": "main"
-	},
-	"HookHandlers": {
-		"main": {
-			"class": "MediaWiki\\Extension\\HeaderExtension\\Hooks"
-		}
-	},
 	"AutoloadClasses": {
 		"MediaWiki\\Extension\\HeaderExtension\\Hooks": "src/Hooks.php"
 	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extension\\HeaderExtension\\Hooks",
+			"services": [
+				"MainConfig"
+			]
+		}
+	},
+	"Hooks": {
+		"BeforePageDisplay": "main"
+	},
 	"config_prefix": "wg",
 	"config": {
-		"HeadMetaCode": {
-			"value": "<!-- No Head Meta -->"
+		"HeaderHeadItems": {
+			"type": "array",
+			"value": []
 		},
-		"HeadMetaName": {
-			"value": "<!-- No Meta Name -->"
-		},
-		"HeadScriptCode": {
-			"value": "<!-- No Head Script -->"
-		},
-		"HeadScriptName": {
-			"value": "<!-- No Script Name -->"
+		"HeaderMetaItems": {
+			"type": "array",
+			"value": []
 		}
 	},
 	"manifest_version": 2
